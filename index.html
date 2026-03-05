@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generated Page</title>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="global.css">
+  <style id="sections-styles">
+/* CSS for section section:Header */
+.site-header {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  position: relative;
+  z-index: 100;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.logo-text {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--primary-pink);
+}
+
+.main-nav {
+  display: flex;
+  gap: 32px;
+}
+
+.nav-link {
+  color: var(--text-gray);
+  font-weight: 500;
+  font-size: 16px;
+  transition: color 0.2s;
+}
+
+.nav-link:hover {
+  color: var(--primary-pink);
+}
+
+.auth-buttons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.btn-login {
+  color: var(--primary-pink);
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.btn-register {
+  background-color: var(--primary-pink);
+  color: white;
+  padding: 10px 24px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 16px;
+  box-shadow: 0px 4px 6px -4px rgba(0, 0, 0, 0.1), 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.btn-register:hover {
+  transform: translateY(-1px);
+}
+
+@media (max-width: 992px) {
+  .main-nav {
+    display: none; /* Hidden for mobile in this simplified view */
+  }
+}
+
+/* CSS for section section:Hero */
+#hero-section {
+  position: relative;
+  padding: 60px 0 100px;
+  overflow: hidden;
+}
+
+/* Background Blob */
+.hero-bg-blob {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background-color: #fff0f5;
+  opacity: 0.6;
+  border-bottom-left-radius: 300px;
+  z-index: -1;
+}
+
+.hero-bg-icon-1 {
+  position: absolute;
+  bottom: 10%;
+  left: 5%;
+  width: 80px;
+  height: 80px;
+  opacity: 0.2;
+  z-index: -1;
+}
+
+.hero-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 40px;
+}
+
+/* Left Column */
+.hero-content {
+  flex: 1;
+  max-width: 580px;
+  z-index: 1;
+}
+
+.badge-pill {
+  display: inline-flex;
+  background-color: #fff0f5;
+  padding: 6px 16px;
+  border-radius: 999px;
+  margin-bottom: 24px;
+}
+
+.badge-pill span {
+  color: var(--primary-pink);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.hero-title {
+  font-size: 56px;
+  line-height: 1.1;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.text-dark { color: var(--text-dark); }
+.text-pink { color: var(--primary-pink); }
+
+.hero-description {
+  color: var(--text-gray);
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  max-width: 90%;
+}
+
+.hero-actions {
+  margin-bottom: 48px;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--primary-pink);
+  color: white;
+  padding: 16px 32px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 18px;
+  box-shadow: 0px 8px 10px -6px rgba(0, 0, 0, 0.1), 0px 20px 25px -5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+}
+
+.hero-features {
+  display: flex;
+  gap: 24px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--text-gray);
+  font-weight: 500;
+}
+
+.check-circle {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.check-circle.green {
+  background-color: #dcfce7;
+  color: #00a63e;
+}
+
+.check-circle.purple {
+  background-color: #f3e8ff;
+  color: #9810fa;
+}
+
+/* Right Column - Image Composition */
+.hero-visuals {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.cards-wrapper {
+  position: relative;
+  width: 650px;
+  height: 430px;
+  /* Scaling for responsiveness handled in media queries */
+}
+
+.card {
+  position: absolute;
+  border-radius: 16px;
+  background: white;
+  box-shadow: 0px 25px 50px -12px rgba(223, 128, 152, 0.3);
+  padding: 9px; /* Border effect */
+  box-sizing: border-box;
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  border-radius: 14px;
+  overflow: hidden;
+  position: relative;
+}
+
+.card-inner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-inner.bg-light {
+  background-color: #fff5f7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Specific Card Positioning & Rotation */
+.card-left {
+  width: 277px;
+  height: 320px;
+  left: 0;
+  top: 132px;
+  transform: rotate(-6deg);
+  z-index: 2;
+}
+
+.card-right {
+  width: 277px;
+  height: 320px;
+  left: 402px;
+  top: 0;
+  transform: rotate(6deg);
+  z-index: 1;
+}
+
+.card-center {
+  width: 260px;
+  height: 260px;
+  left: 201px;
+  top: 120px;
+  z-index: 3;
+  box-shadow: 0px 20px 50px 0px rgba(236, 38, 143, 0.3);
+  padding: 12px;
+}
+
+.new-badge {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 90px;
+  height: 90px;
+  background-color: var(--primary-pink);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.2;
+  box-shadow: 0px 4px 6px -4px rgba(0, 0, 0, 0.1);
+  transform: rotate(15deg);
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .hero-title { font-size: 48px; }
+  .cards-wrapper { transform: scale(0.8); transform-origin: center; }
+}
+
+@media (max-width: 992px) {
+  .hero-container {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  
+  .hero-content {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .hero-features {
+    justify-content: center;
+  }
+  
+  .cards-wrapper {
+    transform: scale(0.7);
+    margin-bottom: -50px;
+  }
+  
+  .hero-bg-blob {
+    width: 100%;
+    height: 60%;
+    top: 0;
+    border-radius: 0 0 50% 50%;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-title { font-size: 36px; }
+  
+  .cards-wrapper {
+    width: 100%;
+    height: auto;
+    min-height: 350px;
+    transform: none;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  
+  .card { position: relative; left: auto; top: auto; transform: none; margin: -20px; }
+  .card-left { transform: rotate(-5deg) translateX(20px); }
+  .card-right { display: none; } 
+  .card-center { transform: rotate(5deg) translateX(-20px); margin-top: 40px; }
+}
+  </style>
+  <script src="global.js" defer></script>
+</head>
+<body>
+<section id="header-section">
+  <header class="site-header">
+    <div class="container header-container">
+      <!-- Logo -->
+      <a href="#" class="logo">
+        <img src="images/a9db1ffa88623b8aba0e2eca9480d9fc9b0fc9c0.png" alt="Dulce Scrap Logo" class="logo-img">
+        <span class="logo-text">Dulce Scrap</span>
+      </a>
+
+      <!-- Navigation -->
+      <nav class="main-nav">
+        <a href="#" class="nav-link">Inicio</a>
+        <a href="#" class="nav-link">Toppers</a>
+        <a href="#" class="nav-link">Nosotros</a>
+        <a href="#" class="nav-link">Contacto</a>
+      </nav>
+
+      <!-- Auth Buttons -->
+      <div class="auth-buttons">
+        <a href="#" class="btn-login">Iniciar Sesión</a>
+        <a href="#" class="btn-register">Registrarse</a>
+      </div>
+    </div>
+  </header>
+</section>
+<section id="hero-section">
+  <!-- Background Elements -->
+  <div class="hero-bg-blob"></div>
+  <div class="hero-bg-icon-1"><img src="images/695_264.svg" alt=""></div>
+  
+  <div class="container hero-container">
+    <!-- Left Column: Text Content -->
+    <div class="hero-content">
+      <div class="badge-pill">
+        <span>Detalles que enamoran</span>
+      </div>
+      
+      <h1 class="hero-title">
+        <span class="text-dark">Personaliza tus</span><br>
+        <span class="text-pink">Momentos Dulces</span>
+      </h1>
+      
+      <p class="hero-description">
+        Descubre nuestra exclusiva colección de toppers y troquelados. Transformamos tus ideas en decoraciones únicas para que cada celebración sea inolvidable.
+      </p>
+      
+      <div class="hero-actions">
+        <a href="https://dulcescrap.figma.site/" class="btn-primary">
+          <span>Visita nuestro sitio web</span>
+          <img src="images/695_301.svg" alt="Arrow" class="btn-icon">
+        </a>
+      </div>
+      
+      <div class="hero-features">
+        <div class="feature-item">
+          <div class="check-circle green">✓</div>
+          <span>Envíos a todo el país</span>
+        </div>
+        <div class="feature-item">
+          <div class="check-circle purple">✓</div>
+          <span>Diseños 100% únicos</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Column: Image Composition -->
+    <div class="hero-visuals">
+      <div class="cards-wrapper">
+        <!-- Card 1: Left (Purple Cake) -->
+        <div class="card card-left">
+          <div class="card-inner">
+            <img src="images/f90f3284001d1173fb05151b5fd682c0139dfd0f.png" alt="Topper Pastel">
+          </div>
+        </div>
+
+        <!-- Card 2: Right (Bluey) -->
+        <div class="card card-right">
+          <div class="card-inner">
+            <img src="images/ebc2950a31f67b576db2987612fe82464c7044f8.png" alt="Topper Bluey">
+          </div>
+        </div>
+
+        <!-- Card 3: Center (Hello 28) -->
+        <div class="card card-center">
+          <div class="card-inner bg-light">
+            <img src="images/b3304e87dd3e1bee1c1de9b13376c71fef927052.png" alt="Topper Hello 28">
+          </div>
+          <!-- Floating Badge -->
+          <div class="new-badge">
+            <span>¡Nuevos<br>Diseños!</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</body>
+</html>
